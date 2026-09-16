@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <title>Currículo - Caroline Victória</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0, 140, 255, .15), transparent 25%),
+        radial-gradient(circle at 85% 80%, rgba(0, 90, 255, .12), transparent 25%),
+        #020617;
+      color: #e2e8f0;
+    }
+
+    .code-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .tech-card {
+      background: rgba(2, 6, 23, .78);
+      border: 1px solid rgba(59, 130, 246, .30);
+      box-shadow: 0 0 25px rgba(0, 110, 255, .08);
+      backdrop-filter: blur(10px);
+      transition: .3s;
+    }
+
+    .tech-card:hover {
+      border-color: rgba(59, 130, 246, .75);
+      box-shadow: 0 0 30px rgba(0, 140, 255, .18);
+      transform: translateY(-2px);
+    }
+
+    .neon {
+      text-shadow:
+        0 0 8px rgba(0, 153, 255, .75),
+        0 0 20px rgba(0, 102, 255, .35);
+    }
+
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradientAnimation 5s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .pulse-blue {
+      animation: pulseBlue 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseBlue {
+      0%, 100% {
+        box-shadow: 0 0 8px rgba(37,99,235,.35);
+      }
+
+      50% {
+        box-shadow: 0 0 22px rgba(37,99,235,.75);
+      }
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(59,130,246,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,.06) 1px, transparent 1px);
+      background-size: 35px 35px;
+    }
+
+    .skill:hover {
+      background: rgba(30, 64, 175, .18);
+      border-color: rgba(96, 165, 250, .55);
+    }
+  </style>
+</head>
+
+<body class="grid-bg min-h-screen">
+
+  <div class="max-w-5xl mx-auto p-4 md:p-8 my-6">
+
+    <div class="tech-card rounded-2xl overflow-hidden">
+
+      <!-- =========================
+           CABEÇALHO
+      ========================== -->
+
+      <header class="relative overflow-hidden bg-gradient-to-r from-slate-950 via-blue-950 to-slate-950 animate-gradient p-7 md:p-12">
+
+        <div class="absolute inset-0 opacity-30 grid-bg"></div>
+
+        <div class="relative flex flex-col md:flex-row items-center gap-8">
+
+          <!-- FOTO -->
+
+          <div class="shrink-0">
+
+            <div class="h-40 w-40 rounded-full border-4 border-blue-400/80 bg-slate-900 flex items-center justify-center pulse-blue overflow-hidden">
+
+              <!--
+                COLOQUE SUA FOTO NA PASTA:
+                img/foto.jpg
+              -->
+
+
+              <div class=" w-full h-full items-center justify-center text-blue-400">
+
+              <img
+                src="./meuCurriculo/carol.jpeg"
+                alt="Foto de Caroline Victória"
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- INFORMAÇÕES -->
+
+          <div class="text-center md:text-left">
+
+            <p class="code-font text-blue-400 text-sm mb-2">
+              &lt;developer&gt;
+            </p>
+
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white neon">
+              Caroline Victória
+            </h1>
+
+            <h2 class="text-xl md:text-2xl font-semibold text-blue-300 mt-2">
+              Estudante de Análise e Desenvolvimento de Sistemas
+            </h2>
+
+            <p class="code-font text-slate-400 mt-3">
+              // aprendendo • desenvolvendo • evoluindo
+            </p>
+
+
+            <!-- TECNOLOGIAS -->
+
+            <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-6">
+
+              <span class="code-font text-xs px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300">
+                HTML
+              </span>
+
+              <span class="code-font text-xs px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300">
+                CSS
+              </span>
+
+              <span class="code-font text-xs px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300">
+                JavaScript
+              </span>
+
+              <span class="code-font text-xs px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300">
+                ADS
+              </span>
+
+            </div>
+
+            <p class="code-font text-blue-400 text-sm mt-4">
+              &lt;/developer&gt;
+            </p>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <!-- =========================
+           CONTEÚDO PRINCIPAL
+      ========================== -->
+
+      <main class="p-6 md:p-10">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+          <!-- =========================
+               COLUNA ESQUERDA
+          ========================== -->
+
+          <section class="md:col-span-2">
+
+
+            <!-- SOBRE MIM -->
+
+            <div class="mb-9">
+
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+
+                <span class="text-blue-400 code-font">
+                  &lt;/&gt;
+                </span>
+
+                Sobre mim
+
+              </h2>
+
+              <div class="w-16 h-1 bg-blue-500 rounded mt-2 mb-4 shadow-[0_0_12px_rgba(59,130,246,.7)]">
+              </div>
+
+
+              <div class="tech-card rounded-xl p-5">
+
+                <p class="text-slate-300 leading-relaxed">
+
+                  Sou estudante de
+                  <strong class="text-blue-300">
+                    Análise e Desenvolvimento de Sistemas (ADS)
+                  </strong>,
+
+                  interessada em tecnologia e desenvolvimento web.
+
+                  Estou construindo meus conhecimentos em programação
+                  e buscando evoluir por meio de projetos práticos,
+                  novos desafios e aprendizado contínuo.
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- OBJETIVO PROFISSIONAL -->
+
+            <div class="mb-9">
+
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+
+                <span class="text-blue-400 code-font">
+                  &gt;_
+                </span>
+
+                Objetivo profissional
+
+              </h2>
+
+              <div class="w-16 h-1 bg-blue-500 rounded mt-2 mb-4 shadow-[0_0_12px_rgba(59,130,246,.7)]">
+              </div>
+
+
+              <div class="tech-card rounded-xl p-5">
+
+                <p class="text-slate-300 leading-relaxed">
+
+                  Busco uma oportunidade para desenvolver experiência
+                  na área de tecnologia, colocar em prática meus
+                  conhecimentos de programação e contribuir para
+                  projetos, enquanto continuo aprimorando minhas
+                  habilidades profissionais.
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- PROJETOS -->
+
+            <div>
+
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+
+                <span class="text-blue-400 code-font">
+                  { }
+                </span>
+
+                Projetos
+
+              </h2>
+
+              <div class="w-16 h-1 bg-blue-500 rounded mt-2 mb-4 shadow-[0_0_12px_rgba(59,130,246,.7)]">
+              </div>
+
+
+              <div class="space-y-4">
+
+
+                <!-- PROJETO 1 -->
+
+                <div class="tech-card rounded-xl p-5 transition-all duration-300">
+
+                  <p class="code-font text-blue-400 text-xs mb-2">
+                    project_01
+                  </p>
+
+                  <h3 class="text-lg font-bold text-white">
+                    Página Web / Portfólio
+                  </h3>
+
+                  <p class="text-slate-400 text-sm mt-2">
+
+                    Desenvolvimento de páginas utilizando HTML
+                    e CSS, com foco em estrutura, organização visual
+                    e responsividade.
+
+                  </p>
+
+                </div>
+
+
+                <!-- PROJETO 2 -->
+
+                <div class="tech-card rounded-xl p-5 transition-all duration-300">
+
+                  <p class="code-font text-blue-400 text-xs mb-2">
+                    project_02
+                  </p>
+
+                  <h3 class="text-lg font-bold text-white">
+                    Projetos acadêmicos
+                  </h3>
+
+                  <p class="text-slate-400 text-sm mt-2">
+
+                    Projetos desenvolvidos durante a graduação de ADS
+                    para praticar lógica, programação e desenvolvimento
+                    de sistemas.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =========================
+               COLUNA DIREITA
+          ========================== -->
+
+          <aside>
+
+
+            <!-- HABILIDADES -->
+
+            <div class="mb-9">
+
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+
+                <span class="text-blue-400 code-font">
+                  #
+                </span>
+
+                Habilidades
+
+              </h2>
+
+              <div class="w-16 h-1 bg-blue-500 rounded mt-2 mb-4 shadow-[0_0_12px_rgba(59,130,246,.7)]">
+              </div>
+
+
+              <div class="space-y-3">
+
+
+                <div class="skill tech-card rounded-lg p-3 transition-all duration-300">
+
+                  <span class="code-font text-blue-300">
+                    &lt;HTML&gt;
+                  </span>
+
+                  <p class="text-slate-300 text-sm mt-1">
+                    Estrutura de páginas web
+                  </p>
+
+                </div>
+
+
+                <div class="skill tech-card rounded-lg p-3 transition-all duration-300">
+
+                  <span class="code-font text-blue-300">
+                    .CSS
+                  </span>
+
+                  <p class="text-slate-300 text-sm mt-1">
+                    Estilização e layouts
+                  </p>
+
+                </div>
+
+
+                <div class="skill tech-card rounded-lg p-3 transition-all duration-300">
+
+                  <span class="code-font text-blue-300">
+                    JavaScript()
+                  </span>
+
+                  <p class="text-slate-300 text-sm mt-1">
+                    Programação para web
+                  </p>
+
+                </div>
+
+
+                <div class="skill tech-card rounded-lg p-3 transition-all duration-300">
+
+                  <span class="code-font text-blue-300">
+                    Git
+                  </span>
+
+                  <p class="text-slate-300 text-sm mt-1">
+                    Controle de versão
+                  </p>
+
+                </div>
+
+
+                <div class="skill tech-card rounded-lg p-3 transition-all duration-300">
+
+                  <span class="code-font text-blue-300">
+                    UI/UX
+                  </span>
+
+                  <p class="text-slate-300 text-sm mt-1">
+                    Noções de experiência e interface
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- FORMAÇÃO -->
+
+            <div class="mb-9">
+
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+
+                <span class="text-blue-400 code-font">
+                  edu
+                </span>
+
+                Formação
+
+              </h2>
+
+              <div class="w-16 h-1 bg-blue-500 rounded mt-2 mb-4 shadow-[0_0_12px_rgba(59,130,246,.7)]">
+              </div>
+
+
+              <div class="tech-card rounded-xl p-4 border-l-4 border-l-blue-500">
+
+                <p class="code-font text-blue-400 text-xs">
+                  CURSO
+                </p>
+
+                <h3 class="font-bold text-white mt-1">
+                  Análise e Desenvolvimento de Sistemas
+                </h3>
+
+                <p class="text-slate-400 text-sm mt-2">
+                  Cursando Curso Técnico de A nalise E Desenvolvimento de Sistema
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- CONTATO -->
+
+            <div>
+
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+
+                <span class="text-blue-400 code-font">
+                  @
+                </span>
+
+                Contato
+
+              </h2>
+
+              <div class="w-16 h-1 bg-blue-500 rounded mt-2 mb-4 shadow-[0_0_12px_rgba(59,130,246,.7)]">
+              </div>
+
+
+              <div class="tech-card rounded-xl p-4 space-y-4">
+
+
+                <div>
+
+                  <p class="code-font text-blue-400 text-xs">
+                    EMAIL
+                  </p>
+
+                  <p class="text-slate-300 text-sm">
+                    carolinevictoria635@email.com
+                  </p>
+
+                </div>
+
+
+                <div>
+
+                  <p class="code-font text-blue-400 text-xs">
+                    LINKEDIN
+                  </p>
+
+                  <p class="text-slate-300 text-sm">
+                    www.linkedin.com/in/caroline-victória-8738ba34a
+                  </p>
+
+                </div>
+
+
+                <div>
+
+                  <p class="code-font text-blue-400 text-xs">
+                    GITHUB
+                  </p>
+
+                  <p class="text-slate-300 text-sm">
+                    github.com/carolinevictoria635-boop
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </main>
+
+
+
+      <!-- =========================
+           RODAPÉ
+      ========================== -->
+
+      <footer class="bg-slate-950/80 border-t border-blue-500/20 p-5 text-center">
+
+        <p class="code-font text-xs text-blue-400">
+
+          &lt;code&gt;
+          Desenvolvido com HTML + CSS + JavaScript
+          &lt;/code&gt;
+
+        </p>
+
+        <p class="text-xs text-slate-500 mt-2">
+          © 2026 Caroline Victória
+        </p>
+
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
